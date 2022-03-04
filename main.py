@@ -1,6 +1,6 @@
 import pygame, sys
 from pygame import *
-from color import get_color_4bit, get_color_5bit
+from color import *
 
 pygame.init()
 clock = pygame.time.Clock()
@@ -10,7 +10,7 @@ cell_posX, cell_posY = 0, 0
 index_x, index_y = 0, 0
 type = ''
 
-filename = 'img_data/palette_example_5bit' #Name of the file to display
+filename = 'img_data/palette_example_4bit' #Name of the file to display
 
 f = open(filename, 'r')
 for data in f:
@@ -30,6 +30,8 @@ if int(bin_info[2], 2) == 0:
     type = '4-bit'
 elif int(bin_info[2], 2) == 1:
     type = '5-bit'
+elif int(bin_info[2], 2) == 2:
+    type = '6-bit'
 
 bin_info.pop(0)
 bin_info.pop(0)
@@ -65,6 +67,8 @@ while True:
             color = get_color_4bit(int(bin_info[cell_index], 2))
         elif type == '5-bit':
             color = get_color_5bit(int(bin_info[cell_index], 2))
+        elif type == '6-bit':
+            color = get_color_6bit(int(bin_info[cell_index], 2))
         pygame.draw.rect(screen, color, bit_rect)
 
     pygame.display.update()
