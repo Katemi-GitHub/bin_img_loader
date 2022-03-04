@@ -4,7 +4,7 @@
  pixel1_color pixel2_color pixel3_color ...  
  next row of pixels ...
  
- ![image](https://user-images.githubusercontent.com/60159484/156784348-927a3f56-7f7c-4d31-90d7-6a2cebb64e02.png)
+![image](https://user-images.githubusercontent.com/60159484/156786260-3a496135-3b4c-4c46-98cf-a4477d1330ed.png)
  
 ![example](https://user-images.githubusercontent.com/60159484/156778885-4efe69d4-16da-40d7-99b6-05b1a81a2f70.png)
 
